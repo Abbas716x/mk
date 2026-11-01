@@ -1,0 +1,8 @@
+{
+  "name": "RESPAWN Lounge OS | قاعة رسبون",
+  "description": "نظام إدارة وتشغيل قاعة رسبون (RESPAWN Lounge) المتطور مع مزامنة لحظية، تصميم زجاجي فاخر، عناصر ثلاثية الأبعاد، وخزنة أمنية متكاملة.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg-base: #0E0B1D;
+  --bg-deep: #2A1E4D;
+  --bg-slate: #3A3A52;
+  --purple-glass: rgba(90, 59, 140, 0.35);
+  --purple-glass-hover: rgba(139, 124, 199, 0.45);
+  --purple-border: rgba(255, 255, 255, 0.08);
+  --purple-border-hover: rgba(201, 194, 227, 0.3);
+  --accent-purple: #8B7CC7;
+  --accent-highlight: #C9C2E3;
+  --neon-cyan: #38BDF8;
+  --neon-emerald: #34D399;
+  --neon-amber: #FBBF24;
+  --neon-rose: #FB7185;
+}
+
+body {
+  background: radial-gradient(circle at 50% 15%, #2A1E4D 0%, #0E0B1D 70%, #07050E 100%);
+  color: #F1F0F7;
+  font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.font-orbitron {
+  font-family: 'Orbitron', monospace;
+}
+
+.font-tajawal {
+  font-family: 'Tajawal', sans-serif;
+}
+
+/* Luxury Cyber-Purple Glassmorphic Surfaces */
+.glass-panel {
+  background: rgba(42, 30, 77, 0.55);
+  backdrop-filter: blur(20px) saturate(170%);
+  -webkit-backdrop-filter: blur(20px) saturate(170%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+  background: rgba(90, 59, 140, 0.28);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: rgba(139, 124, 199, 0.35);
+  border-color: rgba(201, 194, 227, 0.3);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.55), 0 0 25px rgba(139, 124, 199, 0.25);
+  transform: translateY(-4px);
+}
+
+.glass-card-active {
+  background: rgba(90, 59, 140, 0.55);
+  border-color: rgba(201, 194, 227, 0.5);
+  box-shadow: 0 0 30px rgba(139, 124, 199, 0.35), inset 0 0 20px rgba(139, 124, 199, 0.15);
+}
+
+.glass-input {
+  background: rgba(14, 11, 29, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  color: #FFFFFF;
+  transition: all 0.25s ease;
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: #8B7CC7;
+  box-shadow: 0 0 0 3px rgba(139, 124, 199, 0.25), 0 0 20px rgba(139, 124, 199, 0.3);
+  background: rgba(14, 11, 29, 0.9);
+}
+
+/* 3D Transform Utilities */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+/* Custom Scrollbar in Cyber-Purple */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(14, 11, 29, 0.85);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(90, 59, 140, 0.75);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 194, 227, 0.7);
+}
+
+/* Luminous Purple Pulse */
+@keyframes purpleGlow {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(139, 124, 199, 0.4), 0 0 24px rgba(90, 59, 140, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(201, 194, 227, 0.7), 0 0 40px rgba(139, 124, 199, 0.45);
+  }
+}
+
+.pulse-purple {
+  animation: purpleGlow 2.5s infinite;
+}
